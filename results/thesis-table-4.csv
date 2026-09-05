@@ -1,0 +1,15 @@
+experiment_id,condition,temperature,generated_rationale,jaccard,bleu,bertscore,status
+1,random_term_baseline,,,0.072,0.075,0.576,reported_in_thesis_table_4
+2,frequency_term_baseline,,,0.108,0.108,0.608,reported_in_thesis_table_4
+3,standard,1,false,0.394,0.418,0.784,reported_in_thesis_table_4
+4,no_recorded_rationale,1,false,0.398,0.416,0.782,reported_in_thesis_table_4
+5,no_feedback,1,false,0.390,0.415,0.782,reported_in_thesis_table_4
+6,no_recorded_rationale_or_feedback,1,false,0.395,0.414,0.782,reported_in_thesis_table_4
+7,no_observation,1,false,0.392,0.416,0.783,reported_in_thesis_table_4
+8,no_profile,1,false,0.397,0.417,0.784,reported_in_thesis_table_4
+9,no_example,1,false,0.395,0.414,0.785,reported_in_thesis_table_4
+10,no_profile_or_example,1,false,0.397,0.410,0.783,reported_in_thesis_table_4
+11,mismatched_example_with_rationale,1,true,0.304,0.315,0.725,reported_in_thesis_table_4
+12,rationale_output_temperature_1,1,true,0.362,0.371,0.766,reported_in_thesis_table_4
+13,rationale_output_temperature_05,0.5,true,0.351,0.366,0.765,reported_in_thesis_table_4
+14,rationale_output_temperature_15,1.5,true,0.331,0.344,0.753,reported_in_thesis_table_4

@@ -1,0 +1,258 @@
+{
+  "review_date": "2026-09-05",
+  "kind": "aggregation_of_saved_scores_not_model_rerun",
+  "runs": [
+    {
+      "variant": "standard",
+      "metrics": {
+        "jaccard": {
+          "value": 0.3943241682557458,
+          "n": 713,
+          "source_id": "R01",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.4177983848272194,
+          "n": 713,
+          "source_id": "R02",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.7841511025585934,
+          "n": 713,
+          "source_id": "R03",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "no_rationale",
+      "metrics": {
+        "jaccard": {
+          "value": 0.3978551910013617,
+          "n": 713,
+          "source_id": "R04",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.4155050276758725,
+          "n": 713,
+          "source_id": "R05",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.7834313671100691,
+          "n": 713,
+          "source_id": "R06",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "no_feedback",
+      "metrics": {
+        "jaccard": {
+          "value": 0.3900731327865382,
+          "n": 713,
+          "source_id": "R07",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.4148817295198308,
+          "n": 713,
+          "source_id": "R08",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.7817536233434503,
+          "n": 713,
+          "source_id": "R09",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "no_rationale_feedback",
+      "metrics": {
+        "jaccard": {
+          "value": 0.3949625531948253,
+          "n": 713,
+          "source_id": "R10",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.4135882903999107,
+          "n": 713,
+          "source_id": "R11",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.7823645633450731,
+          "n": 713,
+          "source_id": "R12",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "no_observation",
+      "metrics": {
+        "jaccard": {
+          "value": 0.39208667350654225,
+          "n": 713,
+          "source_id": "R13",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.4164133636045877,
+          "n": 713,
+          "source_id": "R14",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.7828507680043599,
+          "n": 713,
+          "source_id": "R15",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "no_profile",
+      "metrics": {
+        "jaccard": {
+          "value": 0.39683753027119983,
+          "n": 713,
+          "source_id": "R16",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.41736878343064415,
+          "n": 713,
+          "source_id": "R17",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.784464521795971,
+          "n": 713,
+          "source_id": "R18",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "no_example",
+      "metrics": {
+        "jaccard": {
+          "value": 0.39462831666015113,
+          "n": 713,
+          "source_id": "R19",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.41406393363431376,
+          "n": 713,
+          "source_id": "R20",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.7852821697443096,
+          "n": 713,
+          "source_id": "R21",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "no_profile_example",
+      "metrics": {
+        "jaccard": {
+          "value": 0.39743461739690583,
+          "n": 713,
+          "source_id": "R22",
+          "aggregation": "mean_of_task_means"
+        },
+        "bleu": {
+          "value": 0.4102193928106132,
+          "n": 713,
+          "source_id": "R23",
+          "aggregation": "mean_of_saved_query_scores"
+        },
+        "bertscore": {
+          "value": 0.7834564854520233,
+          "n": 713,
+          "source_id": "R24",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "mismatched_example_rationale_output",
+      "metrics": {
+        "jaccard": {
+          "value": 0.304071963959759,
+          "n": 471,
+          "source_id": "R25",
+          "aggregation": "mean_of_task_means"
+        },
+        "bertscore": {
+          "value": 0.7251455487086261,
+          "n": 471,
+          "source_id": "R26",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "rationale_output_t1",
+      "metrics": {
+        "jaccard": {
+          "value": 0.36181038498203744,
+          "n": 713,
+          "source_id": "R27",
+          "aggregation": "mean_of_task_means"
+        },
+        "bertscore": {
+          "value": 0.765533346071484,
+          "n": 713,
+          "source_id": "R28",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "rationale_output_t05",
+      "metrics": {
+        "jaccard": {
+          "value": 0.35110006410526706,
+          "n": 713,
+          "source_id": "R29",
+          "aggregation": "mean_of_task_means"
+        },
+        "bertscore": {
+          "value": 0.7648156906829475,
+          "n": 713,
+          "source_id": "R30",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    },
+    {
+      "variant": "rationale_output_t15",
+      "metrics": {
+        "jaccard": {
+          "value": 0.3305835094074778,
+          "n": 712,
+          "source_id": "R31",
+          "aggregation": "mean_of_task_means"
+        },
+        "bertscore": {
+          "value": 0.7534245079320468,
+          "n": 712,
+          "source_id": "R32",
+          "aggregation": "mean_of_saved_query_scores"
+        }
+      }
+    }
+  ]
+}

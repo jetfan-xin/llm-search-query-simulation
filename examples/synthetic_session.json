@@ -1,0 +1,59 @@
+{
+  "synthetic": true,
+  "created_for": "September 2026 offline documentation demo; not thesis evidence",
+  "task_id": "1",
+  "task_background": "A student wants to find a quiet public library for weekend study.",
+  "task_goal": "Identify useful queries for comparing study spaces and opening hours.",
+  "example": "Synthetic demonstration: for a different task about indoor plants, a fictional user searches for low-maintenance houseplants and then compares light requirements. This is not a recorded research session.",
+  "users": [
+    {
+      "user_id": 1,
+      "gender": "male",
+      "age": 25,
+      "field": "Synthetic study participant",
+      "search_frequency": "frequently",
+      "search_history": "long",
+      "task": {
+        "1": {
+          "pre_knowledge_scale": 2,
+          "pre_interest_scale": 4,
+          "pre_difficulty_scale": 2,
+          "content": {
+            "event_a": {
+              "query": "quiet public libraries",
+              "thought": "SYNTHETIC_RATIONALE: compare available study spaces.",
+              "SERP": [
+                {
+                  "title": "SYNTHETIC_OBSERVATION: library study spaces",
+                  "snippet": "An invented search-result summary for an offline demonstration.",
+                  "click_or_not": 1
+                },
+                {
+                  "title": "UNCLICKED_RESULT_NOT_VISIBLE",
+                  "snippet": "This result should not enter the clicked-page history.",
+                  "click_or_not": 0
+                }
+              ],
+              "satisfaction": 3,
+              "satisfaction_thought": "SYNTHETIC_FEEDBACK: opening hours are still needed."
+            },
+            "event_b": {
+              "query": "library weekend opening hours",
+              "thought": "Find whether the study space is open on weekends.",
+              "SERP": [],
+              "satisfaction": 4,
+              "satisfaction_thought": "The fictional result addresses the opening-hours question."
+            },
+            "event_c": {
+              "query": "FUTURE_QUERY_NOT_VISIBLE",
+              "thought": "FUTURE_RATIONALE_NOT_VISIBLE",
+              "SERP": [],
+              "satisfaction": 4,
+              "satisfaction_thought": "FUTURE_FEEDBACK_NOT_VISIBLE"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

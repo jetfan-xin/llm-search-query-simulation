@@ -1,0 +1,98 @@
+{
+  "review_date": "2026-09-05",
+  "kind": "read_only_aggregate_audit_not_model_rerun",
+  "records": [
+    {
+      "source_id": "D01",
+      "users": 30,
+      "sessions": 292,
+      "query_records": 737,
+      "distinct_literal_queries": 493,
+      "queries_by_task": {
+        "1": 82,
+        "2": 66,
+        "3": 73,
+        "4": 89,
+        "5": 100,
+        "6": 55,
+        "7": 85,
+        "8": 53,
+        "9": 76,
+        "10": 58
+      },
+      "rationales_under_legacy_completeness_rule": 0,
+      "feedback_under_legacy_completeness_rule": 0,
+      "serp_entries": 6942,
+      "clicked_entries": 1398
+    },
+    {
+      "source_id": "D02",
+      "users": 30,
+      "sessions": 290,
+      "query_records": 713,
+      "distinct_literal_queries": 486,
+      "queries_by_task": {
+        "1": 79,
+        "2": 66,
+        "3": 73,
+        "4": 82,
+        "5": 100,
+        "6": 54,
+        "7": 82,
+        "8": 53,
+        "9": 66,
+        "10": 58
+      },
+      "rationales_under_legacy_completeness_rule": 456,
+      "feedback_under_legacy_completeness_rule": 683,
+      "serp_entries": 6710,
+      "clicked_entries": 1397
+    },
+    {
+      "source_id": "D03",
+      "users": 30,
+      "sessions": 290,
+      "query_records": 713,
+      "distinct_literal_queries": 349,
+      "queries_by_task": {
+        "1": 79,
+        "2": 66,
+        "3": 73,
+        "4": 82,
+        "5": 100,
+        "6": 54,
+        "7": 82,
+        "8": 53,
+        "9": 66,
+        "10": 58
+      },
+      "rationales_under_legacy_completeness_rule": 0,
+      "feedback_under_legacy_completeness_rule": 0,
+      "serp_entries": 0,
+      "clicked_entries": 0
+    },
+    {
+      "source_id": "D04",
+      "users": 30,
+      "sessions": 292,
+      "query_records": 737,
+      "distinct_literal_queries": 493,
+      "queries_by_task": {
+        "1": 82,
+        "2": 66,
+        "3": 73,
+        "4": 89,
+        "5": 100,
+        "6": 55,
+        "7": 85,
+        "8": 53,
+        "9": 76,
+        "10": 58
+      },
+      "rationales_under_legacy_completeness_rule": 0,
+      "feedback_under_legacy_completeness_rule": 0,
+      "serp_entries": 0,
+      "clicked_entries": 0
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-05",
+  "sources": [
+    {
+      "id": "T01",
+      "label": "Final undergraduate thesis, May 2024",
+      "sha256": "97a102d75f59f7f16c3294914c259fe1fe8cd5c9b8e3c546e4ef8f19079cf01f",
+      "bytes": 6647628,
+      "redistributed": false
+    },
+    {
+      "id": "D01",
+      "label": "Historical data_update0302.json",
+      "sha256": "89d548ca75cc5a71a6e8fe77b55c9fab2cb836a8161eec2b5c40c58320d80603",
+      "bytes": 31774877,
+      "redistributed": false
+    },
+    {
+      "id": "D02",
+      "label": "Historical data0405.json",
+      "sha256": "bfaaaf7f48fa2bd143184b8f5518bfa1949d71aaecc8c719d4b94ae5ba84a601",
+      "bytes": 53990713,
+      "redistributed": false
+    },
+    {
+      "id": "D03",
+      "label": "Historical cleaned_.json",
+      "sha256": "50ef152e2a2e69dccc428da02d684c24ff91edb79dffbd95cbe89c0e07c4f418",
+      "bytes": 91954,
+      "redistributed": false
+    },
+    {
+      "id": "D04",
+      "label": "Historical extracted_original_data_all.json",
+      "sha256": "37a65f3352284953be67c5ec9e4f347b2d2fcefbc595ceb9d7ea76c99f1b3beb",
+      "bytes": 89915,
+      "redistributed": false
+    },
+    {
+      "id": "R01",
+      "label": "standard: saved jaccard output",
+      "sha256": "d6a0721c5de6b5d42e6cfe2b6616fd2da8e540950a14b5458b88b5d1ba676d67",
+      "bytes": 14698,
+      "redistributed": false
+    },
+    {
+      "id": "R02",
+      "label": "standard: saved bleu output",
+      "sha256": "85874701fa8899b8cbe51f2f0bcf26122aff957953683c3be77a3960e9df0a65",
+      "bytes": 20340,
+      "redistributed": false
+    },
+    {
+      "id": "R03",
+      "label": "standard: saved bertscore output",
+      "sha256": "fe1642f78e3414f2dea59e4fa62a76b355019ff106087554fb2675c940175337",
+      "bytes": 17649,
+      "redistributed": false
+    },
+    {
+      "id": "R04",
+      "label": "no_rationale: saved jaccard output",
+      "sha256": "4875f00078714b307b68b0e0f542a1a0aff4bd7d193040718f39e72e2103bd91",
+      "bytes": 14634,
+      "redistributed": false
+    },
+    {
+      "id": "R05",
+      "label": "no_rationale: saved bleu output",
+      "sha256": "c4a5c94e54fa41f343d81bc1841b044edbb08a1ed65dbe6346e69d17f201a0b9",
+      "bytes": 20300,
+      "redistributed": false
+    },
+    {
+      "id": "R06",
+      "label": "no_rationale: saved bertscore output",
+      "sha256": "175d33fe7da5e2074829e4ccae218105d3ea004db0f7254958e8fc60d3715ee9",
+      "bytes": 17619,
+      "redistributed": false
+    },
+    {
+      "id": "R07",
+      "label": "no_feedback: saved jaccard output",
+      "sha256": "1e63a9ae0203e1479ae77266d1738a40534ee1551ebe5c41cf10a0c7b36da1ec",
+      "bytes": 14545,
+      "redistributed": false
+    },
+    {
+      "id": "R08",
+      "label": "no_feedback: saved bleu output",
+      "sha256": "85622dab275f9db96e42867816b1b89f34ec773ea3c210305d973df635141955",
+      "bytes": 20384,
+      "redistributed": false
+    },
+    {
+      "id": "R09",
+      "label": "no_feedback: saved bertscore output",
+      "sha256": "3d82b9ae3ffefd853828648e8258b5d4c3168dbffb902310a86d28ae2f721056",
+      "bytes": 17618,
+      "redistributed": false
+    },
+    {
+      "id": "R10",
+      "label": "no_rationale_feedback: saved jaccard output",
+      "sha256": "affa88d9d3a80ada0f1bec165da684e69c4764e00cd63974eac542874c65b03c",
+      "bytes": 14839,
+      "redistributed": false
+    },
+    {
+      "id": "R11",
+      "label": "no_rationale_feedback: saved bleu output",
+      "sha256": "7e3cae4dd0571eeeba37ed3f14e601f12e64e70ff75d6d110d3eadfbefa39743",
+      "bytes": 20326,
+      "redistributed": false
+    },
+    {
+      "id": "R12",
+      "label": "no_rationale_feedback: saved bertscore output",
+      "sha256": "7c75db2cd73e02f26bb500275534da3ea6068828362a673c56ec6ef3309e2b16",
+      "bytes": 17687,
+      "redistributed": false
+    },
+    {
+      "id": "R13",
+      "label": "no_observation: saved jaccard output",
+      "sha256": "2a8bb540d4e03dd5e2bd98a089d8c6650eb32d9fe7d66c2004dcf44d4a99a53e",
+      "bytes": 14657,
+      "redistributed": false
+    },
+    {
+      "id": "R14",
+      "label": "no_observation: saved bleu output",
+      "sha256": "b068504359fe358b9d4bbe48264c6c755aa0a8e4bb060421921fe4213e7f6af6",
+      "bytes": 20158,
+      "redistributed": false
+    },
+    {
+      "id": "R15",
+      "label": "no_observation: saved bertscore output",
+      "sha256": "f77beb8568330a59ed39be95a35cce49c991b86f7d7baf49194edac9b027e1a3",
+      "bytes": 17673,
+      "redistributed": false
+    },
+    {
+      "id": "R16",
+      "label": "no_profile: saved jaccard output",
+      "sha256": "bd5279281c833b7124deea7544861c0be9fd4a3c3d28a1febc5b086697ebdb0d",
+      "bytes": 14565,
+      "redistributed": false
+    },
+    {
+      "id": "R17",
+      "label": "no_profile: saved bleu output",
+      "sha256": "6ea1f7da753858c1aa913f415d3f1ec4a0cd172840b8e1761382706d01658fa5",
+      "bytes": 20348,
+      "redistributed": false
+    },
+    {
+      "id": "R18",
+      "label": "no_profile: saved bertscore output",
+      "sha256": "1c4318c9151baa1f02396da6cb925ca6ec077038bee4a39b4c2fd63bbdc0d5cc",
+      "bytes": 17672,
+      "redistributed": false
+    },
+    {
+      "id": "R19",
+      "label": "no_example: saved jaccard output",
+      "sha256": "7c33c4427e41b531fe2f64057130644c79479488fef85472bc4b2a99a9c747c0",
+      "bytes": 14630,
+      "redistributed": false
+    },
+    {
+      "id": "R20",
+      "label": "no_example: saved bleu output",
+      "sha256": "00ede8d183582bef74c1e327d6083ee27106feb232dd170ad7f89f929a5a3a66",
+      "bytes": 20205,
+      "redistributed": false
+    },
+    {
+      "id": "R21",
+      "label": "no_example: saved bertscore output",
+      "sha256": "8285905e479b9cb35487e8534697c504daef7b97bb1f7d13a1fb34624be84b46",
+      "bytes": 17549,
+      "redistributed": false
+    },
+    {
+      "id": "R22",
+      "label": "no_profile_example: saved jaccard output",
+      "sha256": "0ccb0ec9c7ab28310f60155b3edeab298e4649ef6448d4fed8334ad4eb62d429",
+      "bytes": 14665,
+      "redistributed": false
+    },
+    {
+      "id": "R23",
+      "label": "no_profile_example: saved bleu output",
+      "sha256": "6f6a0d8bfcc94c025c6846f09be77b6ebcc61a38c52629c99c9d96f874760d59",
+      "bytes": 20225,
+      "redistributed": false
+    },
+    {
+      "id": "R24",
+      "label": "no_profile_example: saved bertscore output",
+      "sha256": "5256fbe5fb7fa492de60da32cfcb4c7b599db745a20365f24873ccbf636132cd",
+      "bytes": 17511,
+      "redistributed": false
+    },
+    {
+      "id": "R25",
+      "label": "mismatched_example_rationale_output: saved jaccard output",
+      "sha256": "ad209e34c33f79a3ea6193e03076bed514de10c86bdf150dab0e7f7e3e4aff5e",
+      "bytes": 9613,
+      "redistributed": false
+    },
+    {
+      "id": "R26",
+      "label": "mismatched_example_rationale_output: saved bertscore output",
+      "sha256": "097070454ef4b20e5982b4428cc98dcb6565862e5092abbf281306053185ef22",
+      "bytes": 11663,
+      "redistributed": false
+    },
+    {
+      "id": "R27",
+      "label": "rationale_output_t1: saved jaccard output",
+      "sha256": "d825057cd6447ab4a30920252927db15a9291262813624c81511d1923749bce3",
+      "bytes": 15304,
+      "redistributed": false
+    },
+    {
+      "id": "R28",
+      "label": "rationale_output_t1: saved bertscore output",
+      "sha256": "87164862594586323bc8749668971860df527ede0576befd7499a64540ba2c25",
+      "bytes": 17621,
+      "redistributed": false
+    },
+    {
+      "id": "R29",
+      "label": "rationale_output_t05: saved jaccard output",
+      "sha256": "20123050dd75253ecc7f9f6e2737d3ead5164e5d0f6751e49b557d24d5742b44",
+      "bytes": 15444,
+      "redistributed": false
+    },
+    {
+      "id": "R30",
+      "label": "rationale_output_t05: saved bertscore output",
+      "sha256": "216befb06d3e5986cf39d0f8f8f7fab82c5c345e509bd6917ab107bb0eb75bd6",
+      "bytes": 17598,
+      "redistributed": false
+    },
+    {
+      "id": "R31",
+      "label": "rationale_output_t15: saved jaccard output",
+      "sha256": "2d41610018f6b8bd4fecf05349d5fa35c460b3f6979af1558cc411385e9f11fc",
+      "bytes": 15138,
+      "redistributed": false
+    },
+    {
+      "id": "R32",
+      "label": "rationale_output_t15: saved bertscore output",
+      "sha256": "7c110df53ad1b05259b8aed3cc56d936038327e21c12bef9940f585190483730",
+      "bytes": 17608,
+      "redistributed": false
+    }
+  ]
+}

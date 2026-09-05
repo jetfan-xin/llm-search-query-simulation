@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-09-05",
+  "study_year": 2024,
+  "files": [
+    {
+      "path": "legacy/baseline_corpus_extractor.py",
+      "source_relative_path": "code/mycode/baseline_corpus_extractor.py",
+      "source_sha256": "3904993cc376e8735e358deee9da842b541d5605d9d640750d2a6a8610e2ba95",
+      "published_sha256": "022c4c876e8fafd18f0dd6b597d2a29a314a4e47702a979f916b7dbff86b1629",
+      "source_bytes": 5114,
+      "published_bytes": 4537,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/baseline_simulator_simplified.py",
+      "source_relative_path": "code/mycode/baseline_simulator_simplified.py",
+      "source_sha256": "1c671ee998d0e135e6ed078cb07b8449996d87e69911269c03438c0d47e8137c",
+      "published_sha256": "3521c634c2a94742061489f5b03ba4400eea06af1f165faac5ab761b45f97039",
+      "source_bytes": 15609,
+      "published_bytes": 13155,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/check_completion.py",
+      "source_relative_path": "code/mycode/check_completion.py",
+      "source_sha256": "0063bb0ac2b6643e20d827c8a11e386bd112bbcaaba35ce76cdd980911af9046",
+      "published_sha256": "11faf425660cc214b8e20b23f9eed13330bc4c32e74a4f2bbf06748471b904b1",
+      "source_bytes": 2734,
+      "published_bytes": 1846,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/clean_answers.py",
+      "source_relative_path": "code/mycode/clean_answers.py",
+      "source_sha256": "cad1132e89469291234a8bb8bb60210e4e3e4da9d4bf4c87764f82cf8a70e7bb",
+      "published_sha256": "31f3e040427618851b6d19da0972f3ade43fde40dfa4cccc0ce4cfec7c4cf798",
+      "source_bytes": 3117,
+      "published_bytes": 2645,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/evaluation_bert.py",
+      "source_relative_path": "code/mycode/evaluation_bert.py",
+      "source_sha256": "051b2bdcae5ef32cd69f722923f30d4b511fdd41ba1724b82de322c42e544460",
+      "published_sha256": "b66e9322e75cbbeaeafe13326d797624cac762873f35faa5fc96845efe03cd38",
+      "source_bytes": 18499,
+      "published_bytes": 7574,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/evaluation_bert_2.py",
+      "source_relative_path": "code/mycode/evaluation_bert_2.py",
+      "source_sha256": "4ba5620d9760f659588c0eac6107abecd316efcd560123ddaafcc9f6eac25538",
+      "published_sha256": "cb5558718cff38e0dd13b8039a97ad76032112304149be497441a2cd9b4ea2a7",
+      "source_bytes": 11027,
+      "published_bytes": 6255,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/evaluation_bert_3.py",
+      "source_relative_path": "code/mycode/evaluation_bert_3.py",
+      "source_sha256": "a2fdada7dbf4c23f762203a2ad8fe4b8d8ed78de5a4219205b3dcf42b02fe749",
+      "published_sha256": "5abd02604250b7ffa6a874f45a3987f83178caa18b8e537b5022d47b54ee8ba1",
+      "source_bytes": 6911,
+      "published_bytes": 4508,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/evaluation_bl.py",
+      "source_relative_path": "code/mycode/evaluation_bl.py",
+      "source_sha256": "978a523f24be27e826da871e9a8afb6ac708a51f8346dfb1fc212dffe7dddc45",
+      "published_sha256": "74f889d5829604095d05755d7511ccb5537b8bcb9079a2e4a516fd89f308a6be",
+      "source_bytes": 7529,
+      "published_bytes": 5998,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/evaluation_bleu.py",
+      "source_relative_path": "code/mycode/evaluation_bleu.py",
+      "source_sha256": "04b29d08ca009e1b12c1e954c74e4e6b05e2c1460a0b69878bae2a3e406d5495",
+      "published_sha256": "e055901127cd7e579bfad4cb46e73c4f44897466d4dc3f6b17d84a7355cb29e7",
+      "source_bytes": 11308,
+      "published_bytes": 6091,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/evaluation_jaccard.py",
+      "source_relative_path": "code/mycode/evaluation_jaccard.py",
+      "source_sha256": "40f6bacb7939aafb64719efcb253e54ab6cb6ea16214ad775313fee417d5dc44",
+      "published_sha256": "08b438ec07ec3b0929e65b27f7c0926077978a0c0d79d943f94ccb7057e4eb46",
+      "source_bytes": 20830,
+      "published_bytes": 8729,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/extract_query.py",
+      "source_relative_path": "code/mycode/extract_query.py",
+      "source_sha256": "32abf87bd99e634964d4f2584692b65954c3a31c8be890f0d237dd9f1d5b341d",
+      "published_sha256": "fc3a99db82a0793348ae484fcd08f2dbf536bda055d203fe0289ea51a73162d5",
+      "source_bytes": 2458,
+      "published_bytes": 1981,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_s.py",
+      "source_relative_path": "code/mycode/prompt_library_s.py",
+      "source_sha256": "38f0d5aa98de433dcbd44631a43aa9eea28b67efb33949dcb4539874d3df1a24",
+      "published_sha256": "1d8c6273d7f00addf071907a4d64f64a7bc929446ef38e72f828356f686a1d01",
+      "source_bytes": 16497,
+      "published_bytes": 6010,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_tol.py",
+      "source_relative_path": "code/mycode/prompt_library_tol.py",
+      "source_sha256": "2284d60c5a6e4a29e3e860fb38776e7d56de64407b529b26a52f40442eef3e6d",
+      "published_sha256": "27c63aa09dc222d222d1ffce649ee9404bfc4e1518f55dafff1cbf56360a316c",
+      "source_bytes": 16650,
+      "published_bytes": 6158,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_charactor.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_charactor.py",
+      "source_sha256": "26b44a9349a5f6fdac12101203d367faeab1a626037a8a2953ee8e76ec0ee83d",
+      "published_sha256": "6efa2ff41575f504554556684324c4ce33669568964f69f9fbe3896434b1898d",
+      "source_bytes": 7601,
+      "published_bytes": 5575,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_charactor_s.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_charactor_s.py",
+      "source_sha256": "7d073ff6bd8a0629442850b83745ca859bde83832835148741e83c2b8833edf5",
+      "published_sha256": "6263e770b10a768d2c4914d2a53847b6cf84656c47eb5cfbc723a3d74b21a623",
+      "source_bytes": 7448,
+      "published_bytes": 5427,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_feedback.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_feedback.py",
+      "source_sha256": "16640ca516976eaed9093967b29a55c7aee7550885dada52ba6642f9e08505c7",
+      "published_sha256": "f9a7934ae14cb1f34c8c5c2b0e77c543e15889cc605cfdfd7b9731b73f60bdd2",
+      "source_bytes": 6733,
+      "published_bytes": 4726,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_guidance.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_guidance.py",
+      "source_sha256": "6ad5786a0ad33893f979dc87b5d4409767ae9f25aa65578541f2bf2e569ce654",
+      "published_sha256": "6a62445523f8d9b59772c8d7e2e4688228b8d969119d8d0eab28db77da461ed5",
+      "source_bytes": 5773,
+      "published_bytes": 5962,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_guidance_charactor.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor.py",
+      "source_sha256": "8747fd0d3cf97a0bfb8c476698555b958c4d25a8eac098fda9fcc474ab18cca7",
+      "published_sha256": "3d21889253aa548c29e4b8fc269b8842b3e27b770fe47a27eecf41001e275180",
+      "source_bytes": 5341,
+      "published_bytes": 5542,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_guidance_charactor_s.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor_s.py",
+      "source_sha256": "4111e60ca8374fd065864b7a3d41ce6e2ed1d43c2cb1dee8ad6ab3e443336a0d",
+      "published_sha256": "07e99930ba929d1be89943fb5ddd1925165d39f122ad7d92591c886158cd8df0",
+      "source_bytes": 5188,
+      "published_bytes": 5394,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_guidance_charactor_thought.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor_thought.py",
+      "source_sha256": "6fb351401b45210ca98741af55f098f404d4503c0698add6f4ce0f5e5e5569a4",
+      "published_sha256": "52c10ddf05648342c03d4f0563d56b7ee43704489c9cb7e28a94137f738b271b",
+      "source_bytes": 4947,
+      "published_bytes": 5156,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_guidance_charactor_thought_feedback.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor_thought_feedback.py",
+      "source_sha256": "6fb351401b45210ca98741af55f098f404d4503c0698add6f4ce0f5e5e5569a4",
+      "published_sha256": "52c10ddf05648342c03d4f0563d56b7ee43704489c9cb7e28a94137f738b271b",
+      "source_bytes": 4947,
+      "published_bytes": 5156,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_guidance_s.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_guidance_s.py",
+      "source_sha256": "3371d4a1379d02450e4c37734d866409e8e5759162a99eddc076113cc6421b0b",
+      "published_sha256": "87e0c0b8b4eceed976b19ef8a0e28f831442806f3da049f02dea06968a09de10",
+      "source_bytes": 5620,
+      "published_bytes": 5814,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_observation.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_observation.py",
+      "source_sha256": "d2aa13c3cc058425d27a52b4ba6d39fc0830cee71e4f24098d32e23a01216a99",
+      "published_sha256": "18871421e1782878249887b752404ea27a1c01447844974f9e7f68bfef2d0531",
+      "source_bytes": 6406,
+      "published_bytes": 4711,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_thought.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_thought.py",
+      "source_sha256": "6a2c17f6cac2bff7ff34b7201584432fe22a77261545b3aadc2c2e4350086d18",
+      "published_sha256": "1cfa9a0b0a2dd0689616e60e63efcde894bde07464971d3df6312014fd68c891",
+      "source_bytes": 7682,
+      "published_bytes": 5609,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/prompt_library_wo_thought_feedback.py",
+      "source_relative_path": "code/mycode/prompt_library_wo_thought_feedback.py",
+      "source_sha256": "089fbf9d8382fe9cd235af27e29ff282a9040f3c668f2fcb8faff241c13fc39f",
+      "published_sha256": "0a3b117a803cb104f1c4e1ad476ebd185c440e453935cc3d6a2a235243d46f7e",
+      "source_bytes": 6114,
+      "published_bytes": 4488,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/simulator.py",
+      "source_relative_path": "code/mycode/simulator.py",
+      "source_sha256": "d4d6e219db5900adb42132af2ad5df99407574048b804c1cf6dda412f306fcda",
+      "published_sha256": "3ae0794fa15469540440efa32fbbd8f00f414f30a0f7ccccb613feac0c7d7d58",
+      "source_bytes": 17096,
+      "published_bytes": 11526,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/statastic_information.py",
+      "source_relative_path": "code/mycode/statastic_information.py",
+      "source_sha256": "6be8bbcaae5698afb6446e2f61c473e10ee7444c27a5f695ae5ed91ff48d10ac",
+      "published_sha256": "6d9343b441a4e6d2f78badc13b5bab4d1e43a6bbe35843946c29b30215963b0f",
+      "source_bytes": 1368,
+      "published_bytes": 1358,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    },
+    {
+      "path": "legacy/user_for_query_times.py",
+      "source_relative_path": "code/mycode/user_for_query_times.py",
+      "source_sha256": "8e83891a5f71c4f9a598ec8b7fa0e6721fa84c4894f33b2822cc427ad1b92f80",
+      "published_sha256": "549f49766bd2cc2fc04beffe4b0b533c38ced0b28495669e9f56d415afb81c71",
+      "source_bytes": 4733,
+      "published_bytes": 4838,
+      "changes": [
+        "Removed comments and standalone explanatory/example strings",
+        "Blanked embedded guidance examples where present",
+        "Replaced provider credentials and endpoint with environment configuration where present",
+        "Added English provenance header; normalised blank lines"
+      ]
+    }
+  ]
+}
