@@ -44,6 +44,29 @@ Source: thesis table 4, PDF page 28 / printed page 21, visually checked during t
 
 The saved standard outputs independently support the rounded standard row: Jaccard **0.394324**, BLEU **0.417798** and BERTScore **0.784151**, each associated with 713 query scores. Here, Jaccard is a mean of task means; BLEU and BERTScore are means over saved query scores. This is an aggregate cross-check, not fresh model inference or an independent implementation of the metrics.
 
+## Archived figure outputs
+
+These are byte-for-byte copies of the chart files used in the final thesis. Their Chinese labels and original rendering are intentionally preserved. The figures visualise thesis-era outputs; they were not regenerated from the public aggregate files and should be interpreted with the evidence and cohort caveats below.
+
+![Similarity by query position](../assets/results/query-step-similarity.png)
+
+*Figure 5 compares the two probabilistic baselines with the standard LLM condition at the first, second, third and fourth-or-later query positions.*
+
+![Search-action ablations](../assets/results/search-action-ablation.png)
+
+*Figure 12 shows Jaccard, BLEU and BERTScore distributions for the standard condition and ablations of rationale, feedback and observation inputs, with the two baselines included for context.*
+
+![Prompt-design ablations](../assets/results/prompt-design-ablation.png)
+
+*Figure 13 shows the corresponding distributions for profile and example ablations, again with the two baselines included for context.*
+
+The thesis also includes two exploratory participant-background summaries:
+
+- [Mean queries per task by background category](../assets/results/mean-queries-by-background.png) (figure 14)
+- [Mean result-page clicks by background category](../assets/results/mean-clicks-by-background.png) (figure 15)
+
+These last two charts expose category-level means only, not participant rows or identifiers. They do not report subgroup sample sizes, uncertainty or significance tests, so they should be treated as descriptive exploration rather than evidence of demographic effects.
+
 ## What is worth taking away
 
 ### 1. History-conditioned generation is a useful query-simulation approach

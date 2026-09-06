@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-09-06",
+  "artifacts": [
+    {
+      "id": "F02",
+      "path": "assets/workflows/llm-query-simulation-framework.drawio",
+      "label": "Editable source for thesis figure 2: LLM query-simulation framework",
+      "thesis_figure": 2,
+      "kind": "workflow_source",
+      "sha256": "4b562d73cf8c9f72cb2c8180eca17c205ea1ec1c8e384670b8a737a94c1e9f29",
+      "bytes": 14797,
+      "byte_for_byte_archive_copy": true,
+      "redistributed": true,
+      "privacy_scope": "Conceptual workflow only; no participant records"
+    },
+    {
+      "id": "F05",
+      "path": "assets/results/query-step-similarity.png",
+      "label": "Thesis figure 5: similarity by query position",
+      "thesis_figure": 5,
+      "kind": "aggregate_result_figure",
+      "sha256": "a0d97f16f51954cf70a973175a21017790bbd1f2e253728d85220e0d5232b237",
+      "bytes": 36045,
+      "byte_for_byte_archive_copy": true,
+      "redistributed": true,
+      "privacy_scope": "Aggregate scores only; no participant records"
+    },
+    {
+      "id": "F12",
+      "path": "assets/results/search-action-ablation.png",
+      "label": "Thesis figure 12: search-action ablations by query position",
+      "thesis_figure": 12,
+      "kind": "aggregate_result_figure",
+      "sha256": "0321df3af10b7932b1f8a1cab9889cd7a63cf453cd8479309877659de65da185",
+      "bytes": 60321,
+      "byte_for_byte_archive_copy": true,
+      "redistributed": true,
+      "privacy_scope": "Aggregate score distributions only; no participant identifiers"
+    },
+    {
+      "id": "F13",
+      "path": "assets/results/prompt-design-ablation.png",
+      "label": "Thesis figure 13: prompt-design ablations by query position",
+      "thesis_figure": 13,
+      "kind": "aggregate_result_figure",
+      "sha256": "277477fb6c2be71ef0aeb1aba9fc486e104813f5ac7e999beb306a1346403966",
+      "bytes": 55745,
+      "byte_for_byte_archive_copy": true,
+      "redistributed": true,
+      "privacy_scope": "Aggregate score distributions only; no participant identifiers"
+    },
+    {
+      "id": "F14",
+      "path": "assets/results/mean-queries-by-background.png",
+      "label": "Thesis figure 14: mean queries by background category",
+      "thesis_figure": 14,
+      "kind": "aggregate_exploratory_figure",
+      "sha256": "4ac7058ccc2929f3b790a0018c152f271c79f73403fdc6d614fc93964ff6d477",
+      "bytes": 31919,
+      "byte_for_byte_archive_copy": true,
+      "redistributed": true,
+      "privacy_scope": "Category-level means only; no participant identifiers or rows"
+    },
+    {
+      "id": "F15",
+      "path": "assets/results/mean-clicks-by-background.png",
+      "label": "Thesis figure 15: mean result clicks by background category",
+      "thesis_figure": 15,
+      "kind": "aggregate_exploratory_figure",
+      "sha256": "086838cced926fb2a23da3d10dddef2d15cd09419502a83af78d4a7c3ed5204a",
+      "bytes": 32619,
+      "byte_for_byte_archive_copy": true,
+      "redistributed": true,
+      "privacy_scope": "Category-level means only; no participant identifiers or rows"
+    }
+  ]
+}

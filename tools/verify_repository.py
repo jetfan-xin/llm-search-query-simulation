@@ -48,6 +48,26 @@ def main():
         require(re.fullmatch('[0-9a-f]{64}', item['sha256']), 'Invalid evidence fingerprint')
         require(item['redistributed'] is False, 'Private source artifact marked for publication')
 
+    public_artifacts = json.loads((ROOT / 'public-artifact-manifest.json').read_text())
+    artifact_ids = {item['id'] for item in public_artifacts['artifacts']}
+    require(len(artifact_ids) == len(public_artifacts['artifacts']), 'Duplicate public artifact ID')
+    expected_artifacts = {item['path'] for item in public_artifacts['artifacts']}
+    actual_artifacts = {
+        str(path.relative_to(ROOT)) for path in (ROOT / 'assets').rglob('*') if path.is_file()
+    }
+    require(expected_artifacts == actual_artifacts, 'Public artifact file list differs from manifest')
+    for item in public_artifacts['artifacts']:
+        path = ROOT / item['path']
+        require(path.is_file(), 'Missing public artifact: ' + item['path'])
+        raw = path.read_bytes()
+        require(re.fullmatch('[0-9a-f]{64}', item['sha256']), 'Invalid public artifact fingerprint')
+        require(item['redistributed'] is True, 'Public artifact not marked for redistribution')
+        require(item['byte_for_byte_archive_copy'] is True,
+                'Public figure must remain an unmodified archive copy')
+        require(len(raw) == item['bytes'], 'Public artifact size differs: ' + item['path'])
+        require(hashlib.sha256(raw).hexdigest() == item['sha256'],
+                'Public artifact fingerprint differs: ' + item['path'])
+
     audit = json.loads((ROOT / 'results/data-audit.json').read_text())
     require([row['query_records'] for row in audit['records']] == [737, 713, 713, 737],
             'Keep historical input/output versions distinct')
@@ -83,20 +103,22 @@ def main():
             links += 1
 
     prohibited = {'.pdf', '.docx', '.xlsx', '.sqlite3', '.db', '.zip', '.rar', '.m4a', '.srt', '.ipynb'}
-    secret = re.compile(r'sk-[A-Za-z0-9_-]{16,}|github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----')
+    secret = re.compile(rb'sk-[A-Za-z0-9_-]{16,}|github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----')
+    private_path = re.compile(rb'/(?:Users|Volumes|home)/[A-Za-z0-9_.-]+')
     for path in ROOT.rglob('*'):
         if not path.is_file() or '.git' in path.parts:
             continue
         require(path.suffix not in prohibited, 'Unexpected private/binary artifact: ' + path.name)
         require('private-source-index' not in path.name, 'Private path index must stay outside repository')
-        text = path.read_text()
-        require(not secret.search(text), 'Credential-like content detected in ' + path.name)
-        require(not re.search(r'/(?:Users|Volumes|home)/[A-Za-z0-9_.-]+', text),
+        raw = path.read_bytes()
+        require(not secret.search(raw), 'Credential-like content detected in ' + path.name)
+        require(not private_path.search(raw),
                 'Private local path detected in ' + path.name)
     require(json.loads((ROOT / 'examples/synthetic_session.json').read_text())['synthetic'] is True,
             'Example must remain labelled synthetic')
     print(f'PASS: {len(sources)} historical source files, {len(python_files)} Python syntax checks, '
-          f'{len(evidence_ids)} evidence sources, 14 thesis conditions, {links} local links.')
+          f'{len(evidence_ids)} private evidence sources, {len(artifact_ids)} public figure artifacts, '
+          f'14 thesis conditions, {links} local links.')
     print('Publication consistency and hygiene checks only; not a live model run or complete security audit.')
 
 

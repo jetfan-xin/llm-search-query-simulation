@@ -16,6 +16,7 @@ The public source selection omits the older `simulator2.py`, a scratch `test.py`
 
 - [source-manifest.json](../source-manifest.json) records the selected Python paths, original and published SHA-256 fingerprints, sizes and publication changes.
 - [evidence-manifest.json](../evidence-manifest.json) identifies the final thesis, four data/output versions and retained numeric evaluation artifacts using English labels and fingerprints.
+- [public-artifact-manifest.json](../public-artifact-manifest.json) records the six redistributed, byte-for-byte figure artifacts, their thesis figure numbers, fingerprints and disclosure scopes.
 - `T01` is the final thesis. Relevant locations include printed pages 7–10 for collection/data, 11–18 for methods, 20–21 for result tables and 35–36 for discussion.
 - `D01` is the 737-query reference export; `D02` is the 713-query input; `D03` is the standard cleaned output; `D04` is the indexed reference-query export.
 - `R` entries identify saved numeric evaluation files. Only derived aggregate scores/counts are published, not their record-level arrays.
@@ -29,6 +30,7 @@ Fingerprints provide version traceability. They do not validate authorship of ev
 3. Removed comments and standalone explanatory/example strings from the selected code, including disabled credentials, scratch material and copied reference prose. Added English source headers and external documentation instead.
 4. Preserved executable Chinese task and prompt strings. Translating them would change the historical experimental input.
 5. Added English documentation, machine-readable aggregate tables, an explicitly synthetic offline preview and tests. These additions are dated 2026 and are not backdated thesis work.
+6. Added the original editable source for thesis figure 2 and original aggregate chart files for figures 5 and 12–15. Their bytes and Chinese labels are unchanged; no participant-level records are bundled.
 
 No original file on the external source drive was modified. No model checkpoints, packages or large archives were copied into this repository.
 

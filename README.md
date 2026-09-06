@@ -44,6 +44,24 @@ The thesis reports higher query-similarity scores for its LLM approach than for 
 
 These are findings within this study's evaluation setup, not a claim of improved live-search performance. Saved outputs support several reported scores, but dataset versions and comparison protocols require care. See [Experiments and findings](docs/EXPERIMENTS.md).
 
+## Original thesis figures
+
+The following images are byte-for-byte copies of the final 2024 thesis figures, with their original Chinese labels preserved. They are archived outputs, not charts recreated during the 2026 publication review.
+
+![Similarity by query position for the two baselines and standard LLM condition](assets/results/query-step-similarity.png)
+
+*Thesis figure 5. Scores by query position. The standard LLM condition is shown in green; the two probabilistic baselines are red and blue.*
+
+![Search-action ablation score distributions](assets/results/search-action-ablation.png)
+
+*Thesis figure 12. Search-action ablations, separated into all queries, first queries and later queries.*
+
+![Prompt-design ablation score distributions](assets/results/prompt-design-ablation.png)
+
+*Thesis figure 13. Prompt-design ablations under the same three-way query-position split.*
+
+The editable diagrams.net source for thesis figure 2 is also available as the [LLM query-simulation framework](assets/workflows/llm-query-simulation-framework.drawio). Two additional aggregate, exploratory figures are documented with their limitations in [Experiments and findings](docs/EXPERIMENTS.md). File hashes and disclosure scopes are recorded in [public-artifact-manifest.json](public-artifact-manifest.json).
+
 ## Technology
 
 **Python | OpenAI API | jieba | NLTK | PyTorch | BERTScore | SciPy | pandas | SQLite**
