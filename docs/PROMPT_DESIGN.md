@@ -31,7 +31,7 @@ Instruction: Formulate the query for step t.
 Output: A structured query response, or a rationale-and-query response.
 ```
 
-The illustration deliberately contains no real participant history or copied demonstration. Original embedded demonstrations were removed from the public code because their provenance and participant-release status could not be established. Consequently, the published prompt modules alone do not reproduce the exact historical few-shot condition.
+The illustration deliberately contains no real participant history. The thesis-era embedded demonstrations are retained in `thesis_code/` because they were part of the prompt configuration, but specific age, programme and related profile fields were replaced with `[REDACTED]` to reduce re-identification risk. The separate offline preview overrides them with an entirely synthetic demonstration.
 
 ## Retained naming conventions
 
@@ -42,12 +42,12 @@ The illustration deliberately contains no real participant history or copied dem
 - `wo_guidance*`: remove the demonstration.
 - Combined suffixes represent combined ablations. The `_s` forms belong to query-only variants where applicable.
 
-## Important configuration issue
+## Historical configuration issue and repair
 
-The archived simulator imports one prompt module statically while separately accepting a `prompt_type` label. Its saved entry point and imported module do not agree. Changing only the label therefore does not reliably switch the complete prompt condition.
+The original simulator imported one prompt module statically while separately accepting a `prompt_type` label. Its saved entry point and imported module did not agree, so changing only the label did not reliably switch the complete condition.
 
-The **2026 offline preview utility** uses an explicit variant-to-template mapping to keep these choices consistent during inspection. That mapping is a maintenance aid, not evidence of the original run configuration. A live replication should record the exact template hash, history-selection settings, model, temperature, output format and example version for every run.
+The publication copy fixes this with an explicit variant-to-template mapping in `simulator.py`; the **2026 offline preview utility** maintains its own equivalent mapping so it can run without importing the SDK. This repair is not evidence of the exact historical run configuration. A live replication should still record the template hash, history-selection settings, model, temperature, output format and example version for every run.
 
 ## Why Chinese remains in the source
 
-Translating the executable prompts would alter the experimental input. English explanations support recruiter and developer review, while retaining the original task/prompt wording preserves the inspectable implementation. The preview fixture and its replacement demonstration are synthetic and clearly labelled; they must not be scored or cited as historical research observations.
+Translating the executable prompts would alter the experimental input. English explanations support recruiter and developer review, while retaining the original task/prompt wording preserves the inspectable implementation. Only the profile fields marked `[REDACTED]` differ for privacy. The preview fixture and its replacement demonstration are synthetic and clearly labelled; they must not be scored or cited as historical research observations.

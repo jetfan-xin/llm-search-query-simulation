@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate public artifacts without importing historical modules or using data."""
+"""Validate public artifacts without importing dependency-heavy thesis modules or using data."""
 
 import ast
 import csv
@@ -23,10 +23,16 @@ def main():
     manifest = json.loads((ROOT / 'source-manifest.json').read_text())
     sources = manifest['files']
     expected = {entry['path'] for entry in sources}
-    actual = {str(path.relative_to(ROOT)) for path in (ROOT / 'legacy').glob('*.py')}
-    require(expected == actual, 'Historical source file list differs from manifest')
+    actual = {
+        str(path.relative_to(ROOT))
+        for path in (ROOT / 'thesis_code').rglob('*')
+        if path.is_file() and (path.suffix in {'.py', '.ipynb'} or path.name == 'stopwords.txt')
+    }
+    require(expected == actual, 'Thesis source file list differs from manifest')
     for entry in sources:
         raw = (ROOT / entry['path']).read_bytes()
+        require(re.fullmatch('[0-9a-f]{64}', entry['published_sha256']),
+                'Invalid published source fingerprint: ' + entry['path'])
         require(hashlib.sha256(raw).hexdigest() == entry['published_sha256'],
                 'Published source fingerprint differs: ' + entry['path'])
 
@@ -35,11 +41,22 @@ def main():
         warnings.simplefilter('ignore', SyntaxWarning)
         for path in python_files:
             ast.parse(path.read_text())
-    for path in (ROOT / 'legacy').glob('prompt*.py'):
-        for node in ast.parse(path.read_text()).body:
-            if isinstance(node, ast.Assign) and isinstance(node.targets[0], ast.Name):
-                if node.targets[0].id.startswith('guidance'):
-                    require(ast.literal_eval(node.value) == '', 'Embedded example must stay withheld')
+    prompt_sources = ''.join(
+        path.read_text() for path in (ROOT / 'thesis_code').glob('prompt_library*.py')
+    )
+    for sensitive_text in ('公共管理学院土地管理专业', '信息学院计算机科学专业', '年龄：21', '年龄：22'):
+        require(sensitive_text not in prompt_sources,
+                'Potentially identifying demonstration profile was restored: ' + sensitive_text)
+    require('[REDACTED]' in prompt_sources, 'Prompt demonstration redaction markers are missing')
+
+    notebooks = list((ROOT / 'thesis_code').glob('*.ipynb'))
+    require(len(notebooks) == 4, 'Expected four sanitised thesis notebooks')
+    for path in notebooks:
+        notebook = json.loads(path.read_text())
+        for cell in notebook['cells']:
+            require(not cell.get('outputs'), 'Notebook output must stay removed: ' + path.name)
+            require(cell.get('execution_count') is None,
+                    'Notebook execution count must stay removed: ' + path.name)
 
     evidence = json.loads((ROOT / 'evidence-manifest.json').read_text())
     evidence_ids = {item['id'] for item in evidence['sources']}
@@ -102,11 +119,11 @@ def main():
             require(resolved.is_relative_to(ROOT) and resolved.exists(), 'Broken local link: ' + target)
             links += 1
 
-    prohibited = {'.pdf', '.docx', '.xlsx', '.sqlite3', '.db', '.zip', '.rar', '.m4a', '.srt', '.ipynb'}
+    prohibited = {'.pdf', '.docx', '.xlsx', '.sqlite3', '.db', '.zip', '.rar', '.m4a', '.srt'}
     secret = re.compile(rb'sk-[A-Za-z0-9_-]{16,}|github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----')
-    private_path = re.compile(rb'/(?:Users|Volumes|home)/[A-Za-z0-9_.-]+')
+    private_path = re.compile(rb'/(?:Users|Volumes|home)/[A-Za-z0-9_.-]+|[A-Za-z]:\\(?:Users|RUC)\\')
     for path in ROOT.rglob('*'):
-        if not path.is_file() or '.git' in path.parts:
+        if not path.is_file() or {'.git', '__pycache__', '.venv', 'venv'} & set(path.parts):
             continue
         require(path.suffix not in prohibited, 'Unexpected private/binary artifact: ' + path.name)
         require('private-source-index' not in path.name, 'Private path index must stay outside repository')
@@ -116,7 +133,7 @@ def main():
                 'Private local path detected in ' + path.name)
     require(json.loads((ROOT / 'examples/synthetic_session.json').read_text())['synthetic'] is True,
             'Example must remain labelled synthetic')
-    print(f'PASS: {len(sources)} historical source files, {len(python_files)} Python syntax checks, '
+    print(f'PASS: {len(sources)} thesis source artifacts, {len(python_files)} Python syntax checks, '
           f'{len(evidence_ids)} private evidence sources, {len(artifact_ids)} public figure artifacts, '
           f'14 thesis conditions, {links} local links.')
     print('Publication consistency and hygiene checks only; not a live model run or complete security audit.')

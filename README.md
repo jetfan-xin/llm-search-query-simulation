@@ -14,6 +14,8 @@ My 2024 undergraduate thesis at **Renmin University of China** investigated this
 
 ## What I implemented
 
+The code under [`thesis_code/`](thesis_code/README.md) is a **sanitised copy of the original thesis implementation**. It is the 2024 project code with narrowly documented privacy, portability and correctness repairs, not a deprecated folder beside an unpublished replacement.
+
 - A **history-conditioned query simulator** that assembles task instructions, user context, prior queries, clicked-page information and user feedback into structured prompts.
 - **Prompt ablations** testing the contribution of recorded rationales, feedback, observations, user profiles, examples and generated rationale output.
 - **Probabilistic query-generation baselines** using task-specific text corpora, random or frequency-based term selection and sampled query lengths.
@@ -75,7 +77,7 @@ The historical model was `gpt-3.5-turbo-0125`; semantic evaluation used `bert-ba
 - [English prompt-design guide](docs/PROMPT_DESIGN.md)
 - [Reproducibility and known issues](docs/REPRODUCIBILITY.md)
 - [Provenance, privacy and attribution](docs/PROVENANCE.md)
-- [Historical Python implementation](legacy/README.md)
+- [Sanitised 2024 thesis implementation](thesis_code/README.md)
 
 ## Try it without an API key
 
@@ -91,4 +93,4 @@ Add `--show-prompt` to inspect the assembled prompt. Documentation is in English
 
 ## Publication status
 
-This public repository was curated in **September 2026**. It includes sanitised historical source, English documentation, aggregate results and new offline review utilities. It excludes participant records, recordings, embedded session examples, credentials and third-party project copies. The historical live-generation pipeline has not been certified as runnable end to end; see the [reproducibility notes](docs/REPRODUCIBILITY.md).
+This public repository was curated in **September 2026**. It includes a sanitised copy of the original thesis implementation, its original directory topology as documented placeholders, aggregate results and separate offline review utilities. It excludes participant records, recordings, credentials, collected page content and third-party project copies. The historical prompt demonstrations are retained with potentially identifying profile fields redacted. Live model generation and private-data evaluation have not been rerun; see the [reproducibility notes](docs/REPRODUCIBILITY.md).

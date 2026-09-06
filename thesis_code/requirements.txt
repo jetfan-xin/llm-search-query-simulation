@@ -1,0 +1,11 @@
+# Compatibility list reconstructed from imports; not an exact 2024 lockfile.
+openai>=0.27,<1
+jieba
+nltk
+scipy
+pandas
+torch
+bert-score
+matplotlib
+seaborn
+jupyter

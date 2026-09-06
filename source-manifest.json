@@ -1,398 +1,504 @@
 {
-  "schema_version": 1,
-  "prepared_on": "2026-09-05",
+  "schema_version": 2,
+  "prepared_on": "2026-09-06",
   "study_year": 2024,
+  "description": "Traceability for the sanitised copy of the original thesis implementation and its code-adjacent resources.",
   "files": [
     {
-      "path": "legacy/baseline_corpus_extractor.py",
+      "path": "thesis_code/barplot.ipynb",
+      "source_relative_path": "code/mycode/barplot.ipynb",
+      "source_sha256": "2e72bf51219eed97f0372262d66d1c0db9e0864cf329dc716f14231aad5cd727",
+      "published_sha256": "76139e59e4f791e6e9c02de68f18ac0f2b3b32769fe2acf6768f72d5b6da7b82",
+      "source_bytes": 93404,
+      "published_bytes": 6713,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Removed notebook outputs and execution counters",
+        "Re-serialised the notebook JSON without changing its code cells"
+      ]
+    },
+    {
+      "path": "thesis_code/baseline/1/stopwords.txt",
+      "source_relative_path": "code/mycode/baseline/1/stopwords.txt",
+      "source_sha256": "5c8d5dd24906615de61ae4056f9261b6fb9f42f58bc75f442fe1032b511dc04b",
+      "published_sha256": "5c8d5dd24906615de61ae4056f9261b6fb9f42f58bc75f442fe1032b511dc04b",
+      "source_bytes": 4717,
+      "published_bytes": 4717,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
+    },
+    {
+      "path": "thesis_code/baseline/2/stopwords.txt",
+      "source_relative_path": "code/mycode/baseline/2/stopwords.txt",
+      "source_sha256": "5c8d5dd24906615de61ae4056f9261b6fb9f42f58bc75f442fe1032b511dc04b",
+      "published_sha256": "5c8d5dd24906615de61ae4056f9261b6fb9f42f58bc75f442fe1032b511dc04b",
+      "source_bytes": 4717,
+      "published_bytes": 4717,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
+    },
+    {
+      "path": "thesis_code/baseline/stopwords.txt",
+      "source_relative_path": "code/mycode/baseline/stopwords.txt",
+      "source_sha256": "5c8d5dd24906615de61ae4056f9261b6fb9f42f58bc75f442fe1032b511dc04b",
+      "published_sha256": "5c8d5dd24906615de61ae4056f9261b6fb9f42f58bc75f442fe1032b511dc04b",
+      "source_bytes": 4717,
+      "published_bytes": 4717,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
+    },
+    {
+      "path": "thesis_code/baseline_corpus_extractor.py",
       "source_relative_path": "code/mycode/baseline_corpus_extractor.py",
       "source_sha256": "3904993cc376e8735e358deee9da842b541d5605d9d640750d2a6a8610e2ba95",
-      "published_sha256": "022c4c876e8fafd18f0dd6b597d2a29a314a4e47702a979f916b7dbff86b1629",
+      "published_sha256": "9e744f7d098535479739ff67eaa11525695cd699c45dbc3dee826a20a90c3d3f",
       "source_bytes": 5114,
-      "published_bytes": 4537,
+      "published_bytes": 4980,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Writes the shared corpus to both original numbered baseline corpus directories",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/baseline_simulator_simplified.py",
+      "path": "thesis_code/baseline_simulator_simplified.py",
       "source_relative_path": "code/mycode/baseline_simulator_simplified.py",
       "source_sha256": "1c671ee998d0e135e6ed078cb07b8449996d87e69911269c03438c0d47e8137c",
-      "published_sha256": "3521c634c2a94742061489f5b03ba4400eea06af1f165faac5ab761b45f97039",
+      "published_sha256": "ab51c3c8fc51e30daf5fb8855eb5e751f1ffc4db2ae97d5cd0707bacb6683d0b",
       "source_bytes": 15609,
-      "published_bytes": 13155,
+      "published_bytes": 15555,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Corrected character-length term handling and empty-corpus behaviour",
+        "Replaced removed pandas DataFrame.append calls and fixed skipped CSV row",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/check_completion.py",
+      "path": "thesis_code/boxplot.ipynb",
+      "source_relative_path": "code/mycode/boxplot.ipynb",
+      "source_sha256": "70a5f164eebcb86ae5439e663202ac719b59a82c4413876a7de51f6efe2fc709",
+      "published_sha256": "83ad17e75f2149f938d67e5996013cd74af9ed72be971ecacede3e62b459db71",
+      "source_bytes": 158515,
+      "published_bytes": 3176,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Removed notebook outputs and execution counters",
+        "Replaced the archived machine-specific Windows root with thesis_code-relative paths",
+        "Removed editor-specific metadata"
+      ]
+    },
+    {
+      "path": "thesis_code/check_completion.py",
       "source_relative_path": "code/mycode/check_completion.py",
       "source_sha256": "0063bb0ac2b6643e20d827c8a11e386bd112bbcaaba35ce76cdd980911af9046",
-      "published_sha256": "11faf425660cc214b8e20b23f9eed13330bc4c32e74a4f2bbf06748471b904b1",
+      "published_sha256": "0c95feb57149800f0be83c42003fff39ad924b70c9d68314a3152019fcce12e3",
       "source_bytes": 2734,
-      "published_bytes": 1846,
+      "published_bytes": 2728,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/clean_answers.py",
+      "path": "thesis_code/clean_answers.py",
       "source_relative_path": "code/mycode/clean_answers.py",
       "source_sha256": "cad1132e89469291234a8bb8bb60210e4e3e4da9d4bf4c87764f82cf8a70e7bb",
-      "published_sha256": "31f3e040427618851b6d19da0972f3ade43fde40dfa4cccc0ce4cfec7c4cf798",
+      "published_sha256": "d610423c72ae32326d67fae7848411f5d71c1905ce4e7867354f2b6f966b32af",
       "source_bytes": 3117,
-      "published_bytes": 2645,
+      "published_bytes": 4259,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Added JSON-first response parsing with historical regex fallback",
+        "Moved output writes after the full user loop and made error ordering deterministic",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/evaluation_bert.py",
+      "path": "thesis_code/evaluation_bert.py",
       "source_relative_path": "code/mycode/evaluation_bert.py",
       "source_sha256": "051b2bdcae5ef32cd69f722923f30d4b511fdd41ba1724b82de322c42e544460",
-      "published_sha256": "b66e9322e75cbbeaeafe13326d797624cac762873f35faa5fc96845efe03cd38",
+      "published_sha256": "b933ee6246d5f344b7165fe9540f9256c8320d3c840eba5a0017109ffc011e19",
       "source_bytes": 18499,
-      "published_bytes": 7574,
+      "published_bytes": 18145,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/evaluation_bert_2.py",
+      "path": "thesis_code/evaluation_bert_2.py",
       "source_relative_path": "code/mycode/evaluation_bert_2.py",
       "source_sha256": "4ba5620d9760f659588c0eac6107abecd316efcd560123ddaafcc9f6eac25538",
-      "published_sha256": "cb5558718cff38e0dd13b8039a97ad76032112304149be497441a2cd9b4ea2a7",
+      "published_sha256": "b34a5f3c94a228f465abe0ce7e97a682943454215603ca4e3ed2445ab88946d0",
       "source_bytes": 11027,
-      "published_bytes": 6255,
+      "published_bytes": 10824,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/evaluation_bert_3.py",
+      "path": "thesis_code/evaluation_bert_3.py",
       "source_relative_path": "code/mycode/evaluation_bert_3.py",
       "source_sha256": "a2fdada7dbf4c23f762203a2ad8fe4b8d8ed78de5a4219205b3dcf42b02fe749",
-      "published_sha256": "5abd02604250b7ffa6a874f45a3987f83178caa18b8e537b5022d47b54ee8ba1",
+      "published_sha256": "846cf763302dd11eaf3b07fe8396d3b13aba76011a924104b3d34adebb197f0e",
       "source_bytes": 6911,
-      "published_bytes": 4508,
+      "published_bytes": 6822,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/evaluation_bl.py",
+      "path": "thesis_code/evaluation_bl.py",
       "source_relative_path": "code/mycode/evaluation_bl.py",
       "source_sha256": "978a523f24be27e826da871e9a8afb6ac708a51f8346dfb1fc212dffe7dddc45",
-      "published_sha256": "74f889d5829604095d05755d7511ccb5537b8bcb9079a2e4a516fd89f308a6be",
+      "published_sha256": "6c84defca3ad77434bc372c67fd896c7926aad5ac12e452772843b749653b03e",
       "source_bytes": 7529,
-      "published_bytes": 5998,
+      "published_bytes": 7405,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/evaluation_bleu.py",
+      "path": "thesis_code/evaluation_bleu.py",
       "source_relative_path": "code/mycode/evaluation_bleu.py",
       "source_sha256": "04b29d08ca009e1b12c1e954c74e4e6b05e2c1460a0b69878bae2a3e406d5495",
-      "published_sha256": "e055901127cd7e579bfad4cb46e73c4f44897466d4dc3f6b17d84a7355cb29e7",
+      "published_sha256": "c562fcb787ab04238149b13cd6353b2fad4103efe4e41611e250d28a2b1de6c5",
       "source_bytes": 11308,
-      "published_bytes": 6091,
+      "published_bytes": 11096,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/evaluation_jaccard.py",
+      "path": "thesis_code/evaluation_jaccard.py",
       "source_relative_path": "code/mycode/evaluation_jaccard.py",
       "source_sha256": "40f6bacb7939aafb64719efcb253e54ab6cb6ea16214ad775313fee417d5dc44",
-      "published_sha256": "08b438ec07ec3b0929e65b27f7c0926077978a0c0d79d943f94ccb7057e4eb46",
+      "published_sha256": "054bd8717a5ad6a84939c15225aa7b5059c3567d565aa9d506d49537b04bc479",
       "source_bytes": 20830,
-      "published_bytes": 8729,
+      "published_bytes": 20558,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Corrected LLM and baseline cross-set comparisons to use full generated/reference products",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/extract_query.py",
+      "path": "thesis_code/extract_query.py",
       "source_relative_path": "code/mycode/extract_query.py",
       "source_sha256": "32abf87bd99e634964d4f2584692b65954c3a31c8be890f0d237dd9f1d5b341d",
-      "published_sha256": "fc3a99db82a0793348ae484fcd08f2dbf536bda055d203fe0289ea51a73162d5",
+      "published_sha256": "c8238c901fe6ce7ca8af4d1568cf5b7ee0c458c1cc82a5475cda865fb41ec0c3",
       "source_bytes": 2458,
-      "published_bytes": 1981,
+      "published_bytes": 2689,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Moved query assignment outside the optional-rationale branch",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/prompt_library_s.py",
+      "path": "thesis_code/lineplot.ipynb",
+      "source_relative_path": "code/mycode/lineplot.ipynb",
+      "source_sha256": "e511e446ba81dee0b445d44973cefc6fc77edf541b8f051425ea3b5ef33be98c",
+      "published_sha256": "0d43e4689e67e2c02b67a36202d7f876d2b64012ef0950778619a64bbbbfce43",
+      "source_bytes": 52887,
+      "published_bytes": 4483,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Removed notebook outputs and execution counters",
+        "Re-serialised the notebook JSON without changing its code cells"
+      ]
+    },
+    {
+      "path": "thesis_code/project_paths.py",
+      "source_relative_path": null,
+      "source_sha256": null,
+      "published_sha256": "b4b7a044cdb7e7514e3653e04a0e606578bdea36386c3754872534e16d794d12",
+      "source_bytes": null,
+      "published_bytes": 326,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Added in 2026 to resolve thesis workspace paths independently of the caller working directory"
+      ]
+    },
+    {
+      "path": "thesis_code/prompt_library_s.py",
       "source_relative_path": "code/mycode/prompt_library_s.py",
       "source_sha256": "38f0d5aa98de433dcbd44631a43aa9eea28b67efb33949dcb4539874d3df1a24",
-      "published_sha256": "1d8c6273d7f00addf071907a4d64f64a7bc929446ef38e72f828356f686a1d01",
+      "published_sha256": "db0dcdd7b0361586750c59c27a251c2a947f7a750115c68db7d349d742b8e83d",
       "source_bytes": 16497,
-      "published_bytes": 6010,
+      "published_bytes": 16192,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Redacted potentially identifying profile attributes in embedded demonstrations",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/prompt_library_tol.py",
+      "path": "thesis_code/prompt_library_tol.py",
       "source_relative_path": "code/mycode/prompt_library_tol.py",
       "source_sha256": "2284d60c5a6e4a29e3e860fb38776e7d56de64407b529b26a52f40442eef3e6d",
-      "published_sha256": "27c63aa09dc222d222d1ffce649ee9404bfc4e1518f55dafff1cbf56360a316c",
+      "published_sha256": "745b8330f276e0727f4f9b1a02d18b373e99afb7f6a94835a55c6ef531f1baa9",
       "source_bytes": 16650,
-      "published_bytes": 6158,
+      "published_bytes": 16340,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Redacted potentially identifying profile attributes in embedded demonstrations",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/prompt_library_wo_charactor.py",
+      "path": "thesis_code/prompt_library_wo_charactor.py",
       "source_relative_path": "code/mycode/prompt_library_wo_charactor.py",
       "source_sha256": "26b44a9349a5f6fdac12101203d367faeab1a626037a8a2953ee8e76ec0ee83d",
-      "published_sha256": "6efa2ff41575f504554556684324c4ce33669568964f69f9fbe3896434b1898d",
+      "published_sha256": "26b44a9349a5f6fdac12101203d367faeab1a626037a8a2953ee8e76ec0ee83d",
       "source_bytes": 7601,
-      "published_bytes": 5575,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 7601,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_charactor_s.py",
+      "path": "thesis_code/prompt_library_wo_charactor_s.py",
       "source_relative_path": "code/mycode/prompt_library_wo_charactor_s.py",
       "source_sha256": "7d073ff6bd8a0629442850b83745ca859bde83832835148741e83c2b8833edf5",
-      "published_sha256": "6263e770b10a768d2c4914d2a53847b6cf84656c47eb5cfbc723a3d74b21a623",
+      "published_sha256": "7d073ff6bd8a0629442850b83745ca859bde83832835148741e83c2b8833edf5",
       "source_bytes": 7448,
-      "published_bytes": 5427,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 7448,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_feedback.py",
+      "path": "thesis_code/prompt_library_wo_feedback.py",
       "source_relative_path": "code/mycode/prompt_library_wo_feedback.py",
       "source_sha256": "16640ca516976eaed9093967b29a55c7aee7550885dada52ba6642f9e08505c7",
-      "published_sha256": "f9a7934ae14cb1f34c8c5c2b0e77c543e15889cc605cfdfd7b9731b73f60bdd2",
+      "published_sha256": "2e54ef5c7b61eee39e5274fbba41dd28a23c6eec72e51b6a80239a507fefa537",
       "source_bytes": 6733,
-      "published_bytes": 4726,
+      "published_bytes": 6591,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Redacted potentially identifying profile attributes in embedded demonstrations",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/prompt_library_wo_guidance.py",
+      "path": "thesis_code/prompt_library_wo_guidance.py",
       "source_relative_path": "code/mycode/prompt_library_wo_guidance.py",
       "source_sha256": "6ad5786a0ad33893f979dc87b5d4409767ae9f25aa65578541f2bf2e569ce654",
-      "published_sha256": "6a62445523f8d9b59772c8d7e2e4688228b8d969119d8d0eab28db77da461ed5",
+      "published_sha256": "6ad5786a0ad33893f979dc87b5d4409767ae9f25aa65578541f2bf2e569ce654",
       "source_bytes": 5773,
-      "published_bytes": 5962,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 5773,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_guidance_charactor.py",
+      "path": "thesis_code/prompt_library_wo_guidance_charactor.py",
       "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor.py",
       "source_sha256": "8747fd0d3cf97a0bfb8c476698555b958c4d25a8eac098fda9fcc474ab18cca7",
-      "published_sha256": "3d21889253aa548c29e4b8fc269b8842b3e27b770fe47a27eecf41001e275180",
+      "published_sha256": "8747fd0d3cf97a0bfb8c476698555b958c4d25a8eac098fda9fcc474ab18cca7",
       "source_bytes": 5341,
-      "published_bytes": 5542,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 5341,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_guidance_charactor_s.py",
+      "path": "thesis_code/prompt_library_wo_guidance_charactor_s.py",
       "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor_s.py",
       "source_sha256": "4111e60ca8374fd065864b7a3d41ce6e2ed1d43c2cb1dee8ad6ab3e443336a0d",
-      "published_sha256": "07e99930ba929d1be89943fb5ddd1925165d39f122ad7d92591c886158cd8df0",
+      "published_sha256": "4111e60ca8374fd065864b7a3d41ce6e2ed1d43c2cb1dee8ad6ab3e443336a0d",
       "source_bytes": 5188,
-      "published_bytes": 5394,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 5188,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_guidance_charactor_thought.py",
+      "path": "thesis_code/prompt_library_wo_guidance_charactor_thought.py",
       "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor_thought.py",
       "source_sha256": "6fb351401b45210ca98741af55f098f404d4503c0698add6f4ce0f5e5e5569a4",
-      "published_sha256": "52c10ddf05648342c03d4f0563d56b7ee43704489c9cb7e28a94137f738b271b",
+      "published_sha256": "6fb351401b45210ca98741af55f098f404d4503c0698add6f4ce0f5e5e5569a4",
       "source_bytes": 4947,
-      "published_bytes": 5156,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 4947,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_guidance_charactor_thought_feedback.py",
+      "path": "thesis_code/prompt_library_wo_guidance_charactor_thought_feedback.py",
       "source_relative_path": "code/mycode/prompt_library_wo_guidance_charactor_thought_feedback.py",
       "source_sha256": "6fb351401b45210ca98741af55f098f404d4503c0698add6f4ce0f5e5e5569a4",
-      "published_sha256": "52c10ddf05648342c03d4f0563d56b7ee43704489c9cb7e28a94137f738b271b",
+      "published_sha256": "6fb351401b45210ca98741af55f098f404d4503c0698add6f4ce0f5e5e5569a4",
       "source_bytes": 4947,
-      "published_bytes": 5156,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 4947,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_guidance_s.py",
+      "path": "thesis_code/prompt_library_wo_guidance_s.py",
       "source_relative_path": "code/mycode/prompt_library_wo_guidance_s.py",
       "source_sha256": "3371d4a1379d02450e4c37734d866409e8e5759162a99eddc076113cc6421b0b",
-      "published_sha256": "87e0c0b8b4eceed976b19ef8a0e28f831442806f3da049f02dea06968a09de10",
+      "published_sha256": "3371d4a1379d02450e4c37734d866409e8e5759162a99eddc076113cc6421b0b",
       "source_bytes": 5620,
-      "published_bytes": 5814,
-      "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
-      ]
+      "published_bytes": 5620,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
     },
     {
-      "path": "legacy/prompt_library_wo_observation.py",
+      "path": "thesis_code/prompt_library_wo_observation.py",
       "source_relative_path": "code/mycode/prompt_library_wo_observation.py",
       "source_sha256": "d2aa13c3cc058425d27a52b4ba6d39fc0830cee71e4f24098d32e23a01216a99",
-      "published_sha256": "18871421e1782878249887b752404ea27a1c01447844974f9e7f68bfef2d0531",
+      "published_sha256": "2041efc2dd78482d097945c16566603df077996582e63a9d03dc6aa88f93a332",
       "source_bytes": 6406,
-      "published_bytes": 4711,
+      "published_bytes": 6278,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Redacted potentially identifying profile attributes in embedded demonstrations",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/prompt_library_wo_thought.py",
+      "path": "thesis_code/prompt_library_wo_thought.py",
       "source_relative_path": "code/mycode/prompt_library_wo_thought.py",
       "source_sha256": "6a2c17f6cac2bff7ff34b7201584432fe22a77261545b3aadc2c2e4350086d18",
-      "published_sha256": "1cfa9a0b0a2dd0689616e60e63efcde894bde07464971d3df6312014fd68c891",
+      "published_sha256": "97f1c7ca8f0838241ed095c5fc9b93cbde7ab09e8b48d9d76265d92b47b91478",
       "source_bytes": 7682,
-      "published_bytes": 5609,
+      "published_bytes": 7528,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Redacted potentially identifying profile attributes in embedded demonstrations",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/prompt_library_wo_thought_feedback.py",
+      "path": "thesis_code/prompt_library_wo_thought_feedback.py",
       "source_relative_path": "code/mycode/prompt_library_wo_thought_feedback.py",
       "source_sha256": "089fbf9d8382fe9cd235af27e29ff282a9040f3c668f2fcb8faff241c13fc39f",
-      "published_sha256": "0a3b117a803cb104f1c4e1ad476ebd185c440e453935cc3d6a2a235243d46f7e",
+      "published_sha256": "3fd38f64ac3ff86f28c2a85e9c63d41f191cfc77c4dbf2e5f402cc5aab80c8c6",
       "source_bytes": 6114,
-      "published_bytes": 4488,
+      "published_bytes": 5974,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Redacted potentially identifying profile attributes in embedded demonstrations",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/simulator.py",
+      "path": "thesis_code/simulator.py",
       "source_relative_path": "code/mycode/simulator.py",
       "source_sha256": "d4d6e219db5900adb42132af2ad5df99407574048b804c1cf6dda412f306fcda",
-      "published_sha256": "3ae0794fa15469540440efa32fbbd8f00f414f30a0f7ccccb613feac0c7d7d58",
+      "published_sha256": "4aed111bc26fdeac690488f03ebbde6f17ce61b1c356423bbb326239f7b26038",
       "source_bytes": 17096,
-      "published_bytes": 11526,
+      "published_bytes": 18234,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Replaced hardcoded API credentials/private endpoint with environment variables",
+        "Bound prompt modules to ablation labels and restored output initialisation",
+        "Added explicit missing-user error and corrected the missing-rationale marker",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/statastic_information.py",
+      "path": "thesis_code/simulator2.py",
+      "source_relative_path": "code/mycode/simulator2.py",
+      "source_sha256": "53b4cc943aaf7ed157a6ab38255e0b102b4c7df97d13583b1dcf87668b322282",
+      "published_sha256": "34d3bd4dbb4d6c4e8d6b8eafc75efb5091a7ee79a8c0a48e30e0dde62a74072b",
+      "source_bytes": 15020,
+      "published_bytes": 14443,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Replaced hardcoded API credentials/private endpoint with environment variables",
+        "Replaced missing prompt_library import with the surviving standard prompt module",
+        "Normalised line endings in the edited publication copy"
+      ]
+    },
+    {
+      "path": "thesis_code/statastic_information.py",
       "source_relative_path": "code/mycode/statastic_information.py",
       "source_sha256": "6be8bbcaae5698afb6446e2f61c473e10ee7444c27a5f695ae5ed91ff48d10ac",
-      "published_sha256": "6d9343b441a4e6d2f78badc13b5bab4d1e43a6bbe35843946c29b30215963b0f",
+      "published_sha256": "0bfc60858063b491085f1435637b2cffcee7b5d1bbe0e56eecfb802e33a0c9b4",
       "source_bytes": 1368,
-      "published_bytes": 1358,
+      "published_bytes": 1371,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     },
     {
-      "path": "legacy/user_for_query_times.py",
+      "path": "thesis_code/test.ipynb",
+      "source_relative_path": "code/mycode/test.ipynb",
+      "source_sha256": "9b7881bfe4d91fc24f8bd1a72a321964edff2aded3e673014ade6d653816cfcb",
+      "published_sha256": "fa0a159eeacb179f30e7ac9f0e7411dc1e5c63e55b8570ada7d866805dd84aa4",
+      "source_bytes": 20536,
+      "published_bytes": 19160,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Removed notebook outputs and execution counters",
+        "Replaced the archived machine-specific Windows root with thesis_code-relative paths",
+        "Removed editor-specific metadata"
+      ]
+    },
+    {
+      "path": "thesis_code/test.py",
+      "source_relative_path": "code/mycode/test.py",
+      "source_sha256": "335f447068d36f2065123dcfadcea23a9f0bc944e031eaebc95d6ad71f780ae1",
+      "published_sha256": "335f447068d36f2065123dcfadcea23a9f0bc944e031eaebc95d6ad71f780ae1",
+      "source_bytes": 396,
+      "published_bytes": 396,
+      "byte_for_byte_archive_copy": true,
+      "changes": []
+    },
+    {
+      "path": "thesis_code/user_for_query_times.py",
       "source_relative_path": "code/mycode/user_for_query_times.py",
       "source_sha256": "8e83891a5f71c4f9a598ec8b7fa0e6721fa84c4894f33b2822cc427ad1b92f80",
-      "published_sha256": "549f49766bd2cc2fc04beffe4b0b533c38ced0b28495669e9f56d415afb81c71",
+      "published_sha256": "fde802d433c6ec21b8895344a03bc496abc7f32c8f92f97bb796ea5965647308",
       "source_bytes": 4733,
-      "published_bytes": 4838,
+      "published_bytes": 4672,
+      "byte_for_byte_archive_copy": false,
       "changes": [
-        "Removed comments and standalone explanatory/example strings",
-        "Blanked embedded guidance examples where present",
-        "Replaced provider credentials and endpoint with environment configuration where present",
-        "Added English provenance header; normalised blank lines"
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
+      ]
+    },
+    {
+      "path": "thesis_code/utils/evaluation_llm.py",
+      "source_relative_path": "code/mycode/utils/evaluation_llm.py",
+      "source_sha256": "b52ebd957e13b12ca6e5376914841690e846b3f485cc3823f302d97d140d4da7",
+      "published_sha256": "814e43e6bac093943026dd584542cfb68801e98ebfcade0169942682c6e66083",
+      "source_bytes": 5917,
+      "published_bytes": 5900,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
+      ]
+    },
+    {
+      "path": "thesis_code/utils/util.py",
+      "source_relative_path": "code/mycode/utils/util.py",
+      "source_sha256": "cfa11e9283e8d744a3ffa23e604a9a0d6a0dacf73a004d469054cc4ee0d79f20",
+      "published_sha256": "dcfec7cea902d0dff1b52a063ae83875c79bb8c0cdc381168aec3b99092cf8c4",
+      "source_bytes": 10419,
+      "published_bytes": 10300,
+      "byte_for_byte_archive_copy": false,
+      "changes": [
+        "Resolved data/baseline/evaluation paths from the thesis_code directory",
+        "Normalised line endings in the edited publication copy"
       ]
     }
   ]

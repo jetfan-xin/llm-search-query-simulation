@@ -20,15 +20,15 @@ The corpus extractor separately prepares baseline inputs from task descriptions,
 
 | Component | Historical file | Responsibility |
 | --- | --- | --- |
-| Main simulator | [`simulator.py`](../legacy/simulator.py) | History selection, prompt assembly, provider call and saved-output logic |
-| Prompt variants | [`prompt_library_s.py`](../legacy/prompt_library_s.py) and related modules | Task definitions, profile/history fields and ablated output instructions |
-| Corpus preparation | [`baseline_corpus_extractor.py`](../legacy/baseline_corpus_extractor.py) | Build task-description, title, snippet and OCR-content term corpora |
-| Probabilistic baselines | [`baseline_simulator_simplified.py`](../legacy/baseline_simulator_simplified.py) | Sample terms and query lengths; search corpus-weight settings |
-| Record checks | [`check_completion.py`](../legacy/check_completion.py) | Count available rationale/feedback annotations and clicked pages |
-| Query extraction | [`extract_query.py`](../legacy/extract_query.py) | Convert research records to indexed query structures |
-| Response processing | [`clean_answers.py`](../legacy/clean_answers.py) | Extract generated query/rationale fields and record problematic steps |
-| Lexical evaluation | [`evaluation_jaccard.py`](../legacy/evaluation_jaccard.py), [`evaluation_bleu.py`](../legacy/evaluation_bleu.py) | Overlap comparisons and short-text BLEU |
-| Semantic evaluation | [`evaluation_bert_2.py`](../legacy/evaluation_bert_2.py) | BERTScore with a Chinese encoder, including first/later-query breakdowns |
+| Main simulator | [`simulator.py`](../thesis_code/simulator.py) | History selection, prompt assembly, provider call and saved-output logic |
+| Prompt variants | [`prompt_library_s.py`](../thesis_code/prompt_library_s.py) and related modules | Task definitions, profile/history fields and ablated output instructions |
+| Corpus preparation | [`baseline_corpus_extractor.py`](../thesis_code/baseline_corpus_extractor.py) | Build task-description, title, snippet and OCR-content term corpora |
+| Probabilistic baselines | [`baseline_simulator_simplified.py`](../thesis_code/baseline_simulator_simplified.py) | Sample terms and query lengths; search corpus-weight settings |
+| Record checks | [`check_completion.py`](../thesis_code/check_completion.py) | Count available rationale/feedback annotations and clicked pages |
+| Query extraction | [`extract_query.py`](../thesis_code/extract_query.py) | Convert research records to indexed query structures |
+| Response processing | [`clean_answers.py`](../thesis_code/clean_answers.py) | Extract generated query/rationale fields and record problematic steps |
+| Lexical evaluation | [`evaluation_jaccard.py`](../thesis_code/evaluation_jaccard.py), [`evaluation_bleu.py`](../thesis_code/evaluation_bleu.py) | Overlap comparisons and short-text BLEU |
+| Semantic evaluation | [`evaluation_bert_2.py`](../thesis_code/evaluation_bert_2.py) | BERTScore with a Chinese encoder, including first/later-query breakdowns |
 | Additional analysis | Other `evaluation_bert*`, `evaluation_bl`, `statastic_information`, `user_for_query_times` modules | Alternative evaluation routines and descriptive analysis |
 
 The names and alternative scripts are retained to make archive tracing possible; they are not an assertion that every script is part of a single polished package.
@@ -48,4 +48,4 @@ Selecting earlier event records does not establish that every annotation was ava
 
 ## Research code versus review utilities
 
-`legacy/` contains source recovered from the 2024 project directory, with publication-related removals documented in the manifest. `tools/` and `tests/` were added in 2026. The preview utility loads only the two original history/prompt methods and literal prompt definitions; it bypasses file-dependent initialisation and all provider calls. It is a narrow behavioural check, not a new implementation claimed as the thesis experiment.
+`thesis_code/` is a sanitised copy of the original 2024 implementation and retains its data, baseline, evaluation, utility and notebook topology. Empty documented directories show where the excluded private inputs and record-level outputs belong. Privacy and correctness changes are fingerprinted in the manifest and summarised in the directory README. `tools/` and `tests/` were added in 2026 and remain separate. The preview utility bypasses file-dependent initialisation and all provider calls; it is a narrow behavioural check, not a replacement simulator claimed as the thesis experiment.

@@ -19,26 +19,35 @@ Tests cover nine preview variants, three query positions, omission of current/fu
 
 The thesis reports Python 3.8, an OpenAI Python client and the model `gpt-3.5-turbo-0125`. Imports establish use of jieba, NLTK, SciPy, pandas, PyTorch and BERTScore. Some preparation scripts also use SQLite. Exact package versions and a complete working environment were not preserved in the selected source.
 
-No speculative pinned `requirements.txt` is presented as the original environment. Current provider/model availability has not been tested, and no API requests were made during this review. The public code uses `OPENAI_API_KEY` and optional `OPENAI_API_BASE` configuration instead of recovered credentials.
+[`thesis_code/requirements.txt`](../thesis_code/requirements.txt) is an explicitly reconstructed compatibility list, not an exact historical lockfile. It constrains `openai<1` because the original `openai.ChatCompletion` interface is intentionally retained. Current provider/model availability has not been tested, and no API requests were made during this review. The public code uses `OPENAI_API_KEY` and optional `OPENAI_API_BASE` configuration instead of recovered credentials.
 
-## Known implementation issues
+## Repairs applied to the publication copy
+
+The original source is traceable through [source-manifest.json](../source-manifest.json). The 2026 copy restores its comments and structure while fixing the following observed defects:
+
+- prompt-module selection and the ablation/output label are configured together;
+- missing output files initialise a resumable user/task structure;
+- project data, baseline and evaluation paths resolve from `thesis_code/`;
+- query-only extraction retains the query field;
+- saved responses are parsed as JSON first, with the historical regular expression retained as a fallback;
+- LLM and baseline cross-set Jaccard calculations enumerate the intended generated/reference pairs;
+- baseline character-length sampling handles terms as strings, CSV ranking no longer skips a row, and `DataFrame.append` is replaced with `concat`.
+
+These are maintenance repairs, not a rerun. Existing aggregate files and thesis tables continue to report the historical outputs.
+
+## Remaining implementation and replication issues
 
 | Area | Observed in retained source | Consequence |
 | --- | --- | --- |
-| Prompt configuration | Static prompt-module import and a separate `prompt_type` label can disagree | A filename/label alone does not identify the actual condition |
-| Output state | `self.output_data` initialisation is commented out in the original simulator | Generation/resume methods need repair before a full run |
 | Input versions | Reference data has 737 queries; standard simulation has 713 | Exact run cohorts must be recorded rather than inferred from the thesis total |
 | Feedback timing | The collection protocol asks for query satisfaction and reasons retrospectively after the task | Earlier event records may contain hindsight; their annotations are not necessarily available at that point in a live session |
-| Query extraction | In `extract_query.py`, query assignment sits inside the `not only_query` branch | The query-only mode does not populate the intended fields |
-| Response processing | Regex-based extraction assumes a particular output layout | Escaped quotes, layout variation and malformed outputs need robust parsing |
-| Baseline Jaccard | Cross-set comparisons are restricted by `i < j` | Not all candidate/reference pairs are evaluated |
-| Additional Jaccard routine | One nominal inter-query branch loops over generated queries on both sides | That returned component is actually within-generated-set similarity; do not confuse it with the correctly paired component |
+| Response processing | The JSON-first parser has not been validated against every retained private response | Unusual malformed layouts may still require manual review or regeneration |
 | Baseline sampling | Integer corpus-list replication and a shifted Poisson are used | The code is more specific than the thesis's abstract mixture/Poisson description |
 | Baseline parameter search | Retained loops fix the content weight to zero and truncate candidate settings | Do not describe this snapshot as exhaustive search across all four weights |
-| Baseline execution | A character-length branch handles sampled list objects as if they were strings; a separate aggregation path uses `DataFrame.append` | These paths require inspection/repair in a replication |
 | Analysis entry points | Several modules perform data access or model initialisation at top level | Importing every historical module is not a safe smoke test |
+| Historical provider/model | The pre-1.0 OpenAI client interface and `gpt-3.5-turbo-0125` identifier are retained | A live run depends on current provider-side compatibility and availability |
 
-These issues are documented rather than silently “fixed” and presented as the 2024 experiment. Publication edits are limited to the changes recorded in the provenance manifest. The 2026 preview's explicit configuration map is separate from the legacy pipeline.
+Remaining issues are documented rather than silently normalised. Publication repairs are recorded in the provenance/source manifests, and the 2026 preview remains separate from the thesis implementation.
 
 ## Metric interpretation
 
@@ -65,9 +74,9 @@ The map is a JSON object containing `sources`, which maps the evidence IDs to ab
 1. Establish permission to use the participant data, examples and collected page content.
 2. Freeze one input cohort and identify every included user/task/query step without exposing identifiers publicly.
 3. Create a deterministic run configuration linking each prompt module, history-ablation setting, example, model and temperature.
-4. Restore output initialisation, implement robust JSON parsing and validate indexing/order explicitly.
-5. Resolve the metric and baseline issues above; document corrections as a **later replication**, preserving original reported results separately.
+4. Validate response parsing and record indexing/order against the authorised private files.
+5. Resolve the remaining metric and baseline design issues above; document corrections as a **later replication**, preserving original reported results separately.
 6. Evaluate all conditions on the same query set, separate tuning from evaluation, repeat stochastic runs and quantify uncertainty at appropriate session/participant levels.
 7. Record dependency versions, model/tokenizer identifiers, data and prompt hashes, failure counts and exclusion rules.
 
-Live provider calls, model downloads and a repaired end-to-end experiment are deliberately outside this archive-publication run.
+Live provider calls, model downloads and an end-to-end rerun on private data remain outside this publication review.

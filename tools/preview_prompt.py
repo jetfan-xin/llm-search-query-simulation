@@ -9,6 +9,7 @@ import argparse
 import ast
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,16 +38,19 @@ def build_preview(variant='standard', step=2):
         raise ValueError('Step must be between 1 and the synthetic session length')
 
     filename, prompt_type = VARIANTS[variant]
-    template_tree = ast.parse((ROOT / 'legacy' / filename).read_text())
+    template_tree = ast.parse((ROOT / 'thesis_code' / filename).read_text())
     namespace = {}
     for node in template_tree.body:
         if isinstance(node, ast.Assign) and len(node.targets) == 1 and isinstance(node.targets[0], ast.Name):
             namespace[node.targets[0].id] = ast.literal_eval(node.value)
-    namespace['all_task_background'] = {task_id: fixture['task_background']}
-    namespace['all_task_goal'] = {task_id: fixture['task_goal']}
-    namespace['guidance'] = '' if 'guidance' in prompt_type else fixture['example']
+    prompt_module = SimpleNamespace(
+        all_task_background={task_id: fixture['task_background']},
+        all_task_goal={task_id: fixture['task_goal']},
+        main_prompt=namespace['main_prompt'],
+        guidance='' if 'guidance' in prompt_type else fixture['example'],
+    )
 
-    source = ROOT / 'legacy/simulator.py'
+    source = ROOT / 'thesis_code' / 'simulator.py'
     tree = ast.parse(source.read_text())
     original_class = next(node for node in tree.body
                           if isinstance(node, ast.ClassDef) and node.name == 'GenerateQuery')
@@ -62,6 +66,7 @@ def build_preview(variant='standard', step=2):
     builder = namespace['OfflinePromptBuilder']()
     builder.all_data = fixture['users']
     builder.prompt_type = prompt_type
+    builder.prompt_module = prompt_module
     prompt = builder.compose_prompt(fixture['users'][0]['user_id'], task_id, step - 1)
     return {
         'mode': 'synthetic offline preview, added in 2026',

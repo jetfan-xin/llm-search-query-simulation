@@ -10,11 +10,11 @@ The source archive contains thesis drafts, a final thesis, a personal implementa
 
 The extracted implementation directory was compared with the two `mycode.zip` snapshots. The later ZIP contains the same 33 Python paths as the extracted tree; three files differ: the corpus extractor and two main prompt libraries. The extracted versions were selected and fingerprinted. The earlier root-level ZIP contains an older, smaller set of scripts, including a prompt-module name not present in the later tree. It was inspected, not indiscriminately merged.
 
-The public source selection omits the older `simulator2.py`, a scratch `test.py`, three utility files, cached bytecode, IDE files and notebook outputs. A crawler in the personal folder exactly matches the copy in the adjacent `WebAgentFSM` tree; it is excluded rather than presented as original thesis implementation. The third-party projects themselves are not redistributed.
+The public source now includes the top-level Python scripts, `simulator2.py`, `test.py`, the two original analysis utilities, three original stopword copies and four plotting notebooks. Notebook outputs and execution counters are removed. A crawler in the personal folder exactly matches the copy in the adjacent `WebAgentFSM` tree; its original path is represented by an attribution README instead of presenting third-party code as original thesis work. Cached bytecode, IDE state and the third-party project trees are not redistributed.
 
 ## Source records
 
-- [source-manifest.json](../source-manifest.json) records the selected Python paths, original and published SHA-256 fingerprints, sizes and publication changes.
+- [source-manifest.json](../source-manifest.json) records the selected code/notebook/resource paths, original and published SHA-256 fingerprints, sizes and publication changes.
 - [evidence-manifest.json](../evidence-manifest.json) identifies the final thesis, four data/output versions and retained numeric evaluation artifacts using English labels and fingerprints.
 - [public-artifact-manifest.json](../public-artifact-manifest.json) records the six redistributed, byte-for-byte figure artifacts, their thesis figure numbers, fingerprints and disclosure scopes.
 - `T01` is the final thesis. Relevant locations include printed pages 7–10 for collection/data, 11–18 for methods, 20–21 for result tables and 35–36 for discussion.
@@ -26,17 +26,18 @@ Fingerprints provide version traceability. They do not validate authorship of ev
 ## Publication changes made in September 2026
 
 1. Replaced hardcoded credentials and the private API endpoint with environment-variable configuration. Old credentials were not tested or published.
-2. Removed embedded demonstration-session literals, including background attributes and example response text whose disclosure status was not established.
-3. Removed comments and standalone explanatory/example strings from the selected code, including disabled credentials, scratch material and copied reference prose. Added English source headers and external documentation instead.
-4. Preserved executable Chinese task and prompt strings. Translating them would change the historical experimental input.
-5. Added English documentation, machine-readable aggregate tables, an explicitly synthetic offline preview and tests. These additions are dated 2026 and are not backdated thesis work.
-6. Added the original editable source for thesis figure 2 and original aggregate chart files for figures 5 and 12–15. Their bytes and Chinese labels are unchanged; no participant-level records are bundled.
+2. Restored the original comments, prompt text and source structure. Specific profile attributes in embedded demonstrations are marked `[REDACTED]`; the interaction text and experiment instructions remain.
+3. Added documented placeholders for private data, baseline corpora/outputs and record-level evaluation artifacts. Git ignores restored private contents while the public READMEs describe their schemas and roles.
+4. Applied scoped repairs to prompt selection, output initialisation, path resolution, response parsing, query extraction, cross-set Jaccard evaluation and baseline execution. These repairs are identified as 2026 maintenance and were not used to rewrite the reported 2024 results.
+5. Retained the original notebook code after removing outputs, execution counters and machine-specific paths. Added a separate sanitisation utility for that mechanical transformation.
+6. Added English documentation, machine-readable aggregate tables, an explicitly synthetic offline preview and tests. These additions are dated 2026 and are not backdated thesis work.
+7. Added the original editable source for thesis figure 2 and original aggregate chart files for figures 5 and 12–15. Their bytes and Chinese labels are unchanged; no participant-level records are bundled.
 
 No original file on the external source drive was modified. No model checkpoints, packages or large archives were copied into this repository.
 
 ## Excluded from the public repository
 
-Participant names, email addresses, student numbers, profile exports, query/session records, audio, transcripts, screen captures, collected page content, databases, signed pages, administrative forms, thesis binaries and third-party literature/project bundles are excluded. Embedded examples are also withheld, even if they contain no direct name, because demographic/background combinations and verbatim session content may still be identifying.
+Participant names, email addresses, student numbers, profile exports, query/session exports, audio, transcripts, screen captures, collected page content, databases, signed pages, administrative forms, thesis binaries and third-party literature/project bundles are excluded. The demonstrations embedded in the historical prompt source are retained after specific profile attributes are redacted; their presence and remaining interaction text are explicit rather than described as synthetic participant data.
 
 The synthetic fixture is entirely invented for the review utilities. It is not a de-identified participant and must not be used as research evidence. There is no implicit permission to redistribute the original dataset or third-party material merely because this curated repository is public.
 

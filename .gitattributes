@@ -1,0 +1,2 @@
+# Preserve archival prompt whitespace and original line endings in the 2024 source.
+thesis_code/** whitespace=-trailing-space
